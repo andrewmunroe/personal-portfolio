@@ -1,0 +1,11 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="I'm an award-winning digital producer based in Vancouver, BC. I write, design, develop, and manage digital projects.">
+  <title>{% if page.title and page.portfolio == true %}{{ page.title | escape }} | Andrew Munroe's Portfolio{% else %}{{ site.title | escape }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <script src="{{ "/assets/js/circletext.min.js" | relative_url }}"></script>
+  <link rel="stylesheet" href="https://brick.freetls.fastly.net/Crimson:400,700,400i">
+  {% include google-analytics.html %}
+</head>
