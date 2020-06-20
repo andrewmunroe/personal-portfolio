@@ -5,7 +5,7 @@
             {% if page.portfolio %}
             <a id="home" title="Back Home" href="{{ "/" | relative_url }}">home</a>
             {% else %}
-            <a title="Recent Projects"{% if page.portfolio %} class="active" {% endif %} href="{{ "/recent-projects" | relative_url }}">Recent Projects</a>
+            <a title="Recent Projects"{% if page.portfolio %} class="active" {% endif %} href="{{ "/recent-projects" | relative_url }}"><span class="hs">Recent</span> Projects</a>
             {% endif %}
             <a title="Send Me an Email" href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>
         </div>

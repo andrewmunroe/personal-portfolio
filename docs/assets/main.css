@@ -275,6 +275,12 @@ nav#site-nav {
     .hide-sm {
       display: inline-block; } }
 
+.hs {
+  display: none; }
+  @media (min-width: 340px) {
+    .hs {
+      display: inline-block; } }
+
 .highlight {
   background-color: #c3c3c3;
   text-decoration: none;
