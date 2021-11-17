@@ -7,7 +7,7 @@
   <title>Andrew Munroe | Digital Producer</title>
   <link rel="stylesheet" href="/assets/main.css">
   <script src="/assets/js/circletext.min.js"></script>
-  <link rel="stylesheet" href="https://brick.freetls.fastly.net/Roboto:400,700,400i">
+  <link rel="stylesheet" href="https://brick.freetls.fastly.net/Roboto:400,700">
 </head><body><header class="site-header" role="banner">
 
     <nav id="site-nav">
@@ -20,6 +20,9 @@
 <main class="page-content" aria-label="Content">
         <section id="welcome">
     <div class="grid">
+        <div class="column" id="mobile-intro">
+          <h1>I'm Andrew Munroe, a digital producer and writer based in Vancouver.</h1>
+        </div>
         <div class="column shrink">
             <figure id="home">
               <img id="am" class="round" src="assets/img/andrew-munroe.jpg" width="200" height="200">
@@ -27,8 +30,8 @@
             </figure>
         </div>
         <div class="column">
-            <h1>I'm Andrew Munroe, an award-winning digital producer and writer based in Vancouver.</h1>
-            <p>I develop, design, manage, and write for digital projects — mostly things related to journalism, non-profits, and education. Check out some of my work below or say hello via <a href="mailto:mail@andrewmunroe.com">email</a>, <a href="https://ca.linkedin.com/in/andrewemunroe">LinkedIn</a>, or <a href="https://github.com/andrewmunroe">GitHub</a>.</p>
+          <h1 id="desktop-intro">I'm Andrew Munroe, a digital producer and writer based in Vancouver.</h1>
+          <p>I develop, design, manage, and write for digital projects — mostly things related to journalism, non-profits, and education. Check out some of my work below or say hello via <a href="mailto:mail@andrewmunroe.com">email</a>, <a href="https://ca.linkedin.com/in/andrewemunroe">LinkedIn</a>, or <a href="https://github.com/andrewmunroe">GitHub</a>.</p>
         </div>
     </div>
 </section>
@@ -38,37 +41,57 @@
     <ul>
       <li id="plastics">
         <a href="https://globalreportingcentre.org/plastics/">
-          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div>The house that plastic built
+          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div><div class="info">The house that plastic built<span>Writing, Design, Development, Data Viz</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
       <li id="supplies">
         <a href="https://globalreportingcentre.org/medical-supply-crisis/">
-          <div class="img-container"><img alt="FRONTLINE AP" src="assets/img/frontline-ap.jpg" /></div>America's medical supply crisis
+          <div class="img-container"><img alt="FRONTLINE AP" src="assets/img/frontline-ap.jpg" /></div><div class="info">America's medical supply crisis<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
       <li id="tyee">
         <a href="https://thetyee.ca/big-melt/">
-          <div class="img-container"><img alt="The Tyee" src="assets/img/tyee.jpg" /></div>The big melt
+          <div class="img-container"><img alt="The Tyee" src="assets/img/tyee.jpg" /></div><div class="info">The big melt<span>Design, Development, Data Viz</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
       <li id="jersey">
         <a href="https://globalreportingcentre.org/jersey-offshore/">
-          <div class="img-container"><img alt="Mother Jones" src="assets/img/motherjones.jpg" /></div>Jersey offshore
+          <div class="img-container"><img alt="Mother Jones" src="assets/img/motherjones.jpg" /></div><div class="info">Jersey offshore<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
       <li id="turning">
         <a href="https://globalreportingcentre.org/turning-points/">
-          <div class="img-container"><img alt="PBS Newshour" src="assets/img/pbs.png" /></div>Turning points
+          <div class="img-container"><img alt="PBS Newshour" src="assets/img/pbs.png" /></div><div class="info">Turning points<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
       <li id="fishmeal">
         <a href="https://globalreportingprogram.org/fishmeal/">
-          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div>The fish you (don't know you) eat
+          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div><div class="info">The fish you (don't know you) eat<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
       <li id="school">
         <a href="https://globalreportingprogram.org/beyond-school">
-          <div class="img-container"><img alt="Global Reporting Program" src="assets/img/grc.jpg" /></div>Beyond school
+          <div class="img-container"><img alt="Global Reporting Program" src="assets/img/grc.jpg" /></div><div class="info">Beyond school<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="list-container">
+    <h2>Non-profit</h2>
+    <ul>
+      <li>
+        <a href="https://stanleyparkecology.ca">
+          <div class="img-container"><img alt="SPES" src="assets/img/spes.png" /></div><div class="info">Stanley Park Ecology Society<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+        </a>
+      </li>
+      <li>
+        <a href="https://disabilityalliancebc.org/dtc-app/">
+          <div class="img-container"><img alt="DABC" src="assets/img/dabc.png" /></div><div class="info">Disability tax credit tool<span>Strategy, Writing, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+        </a>
+      </li>
+      <li>
+        <a href="https://globalreportingcentre.org">
+          <div class="img-container"><img alt="GRC" src="assets/img/grc.jpg" /></div><div class="info">Global Reporting Centre<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
     </ul>
