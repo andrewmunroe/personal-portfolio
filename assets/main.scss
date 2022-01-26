@@ -392,6 +392,12 @@ figure#home {
     pointer-events: none;
   }
 
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
   &.flipped .card {
     transform: rotateY(0deg);
   }
