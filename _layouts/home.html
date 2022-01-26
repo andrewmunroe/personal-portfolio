@@ -9,8 +9,15 @@ layout: default
         </div>
         <div class="column shrink">
             <figure id="home">
-              <img id="am" class="round" src="assets/img/andrew-munroe.jpg" width="200" height="200">
-              <figcaption id="circlelife">please, send help.</figcaption>
+              <span class="card">
+                <span class="front">
+                  <img alt="a baby" class="round" src="assets/img/baby-andrew-munroe.jpg" width="200" height="200">
+                </span>
+                <span class="back">
+                  <img alt="a guy" class="round" src="assets/img/andrew-munroe.jpg" width="200" height="200">
+                </span>
+              </span>
+              <figcaption id="circlelife"><span id="then">then</span> / <span id="now">now</span></figcaption>
             </figure>
         </div>
         <div class="column">
@@ -50,12 +57,12 @@ layout: default
       </li>
       <li id="fishmeal">
         <a href="https://globalreportingprogram.org/fishmeal/">
-          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div><div class="info">The fish you (don't know you) eat<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div><div class="info">The fish you (don't know you) eat<span>Design, Development, Strategy</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
       <li id="school">
         <a href="https://globalreportingprogram.org/beyond-school">
-          <div class="img-container"><img alt="Global Reporting Program" src="assets/img/grc.jpg" /></div><div class="info">Beyond school<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+          <div class="img-container"><img alt="Global Reporting Program" src="assets/img/grp.jpg" /></div><div class="info">Beyond school<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
     </ul>
@@ -69,13 +76,28 @@ layout: default
         </a>
       </li>
       <li>
+        <a href="https://globalreportingcentre.org">
+          <div class="img-container"><img alt="GRC" src="assets/img/grc.jpg" /></div><div class="info">Global Reporting Centre<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+        </a>
+      </li>
+      <li>
         <a href="https://disabilityalliancebc.org/dtc-app/">
           <div class="img-container"><img alt="DABC" src="assets/img/dabc.png" /></div><div class="info">Disability tax credit tool<span>Strategy, Writing, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
+    </ul>
+  </div>
+  <div class="list-container">
+    <h2>Education</h2>
+    <ul>
       <li>
-        <a href="https://globalreportingcentre.org">
-          <div class="img-container"><img alt="GRC" src="assets/img/grc.jpg" /></div><div class="info">Global Reporting Centre<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+        <a href="https://ijb.utoronto.ca/">
+          <div class="img-container"><img alt="DLSPH" src="assets/img/dlsph.jpg" /></div><div class="info">IJB @ the University of Toronto's Dalla Lana School of Public Health<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
+        </a>
+      </li>
+      <li>
+        <a href="https://globalreportingprogram.org">
+          <div class="img-container"><img alt="GRC" src="assets/img/grp.jpg" /></div><div class="info">Global Reporting Program<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
         </a>
       </li>
     </ul>
@@ -83,5 +105,8 @@ layout: default
 </section>
 
 <script>
-  const circleType = new CircleType(document.getElementById('circlelife')).dir(-1).radius(115);
+  const homeFig = document.getElementById('home');
+  homeFig.addEventListener('click', function(event) {
+    homeFig.classList.toggle('flipped');
+  });
 </script>
