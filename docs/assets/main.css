@@ -113,7 +113,7 @@ body {
     .list-container li:nth-child(4n) a {
       border-color: #FAFFAB; }
   .list-container li a {
-    display: flex;
+    display: block;
     background: #f9f9f9;
     border-radius: 0.2rem;
     text-decoration: none;
@@ -130,7 +130,8 @@ body {
         padding: 1rem; } }
     @media (min-width: 640px) {
       .list-container li a {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        display: flex; } }
     @media (min-width: 640px) {
       .list-container li a {
         padding: 1.5rem 1rem; } }
@@ -165,16 +166,21 @@ body {
     .list-container li a:hover, .list-container li a:focus {
       box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15); }
   .list-container div.arrow {
-    display: none;
+    display: block;
+    float: right;
     text-align: right;
     flex: 1;
-    margin-left: 1rem;
+    margin-top: -1.25rem;
     min-width: 1.15rem; }
-    @media (min-width: 340px) {
+    @media (min-width: 640px) {
       .list-container div.arrow {
-        display: block; } }
+        float: none;
+        align-self: center;
+        margin-top: 0; } }
     .list-container div.arrow img {
       width: 1.15rem; }
+  .list-container div.info {
+    margin-right: 2rem; }
 
 img {
   vertical-align: middle;
