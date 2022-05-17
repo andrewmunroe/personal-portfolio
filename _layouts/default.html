@@ -5,11 +5,8 @@
 
   <body>
 
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-        {{ content }}
-    </main>
+    {{ content }}
+    <script type="text/javascript" src="{{ '/assets/js/' | relative_url }}main.js"></script>
 
   </body>
 

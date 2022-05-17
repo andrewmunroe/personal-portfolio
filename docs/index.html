@@ -5,127 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="I'm an award-winning digital producer based in Vancouver, BC. I develop, design, manage, and write for digital projects — mostly things related to journalism, non-profits, and education.">
   <title>Andrew Munroe | Digital Producer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="stylesheet" href="https://brick.freetls.fastly.net/Roboto:400,700">
-</head><body><header class="site-header" role="banner">
+</head><body>
 
-    <nav id="site-nav">
-        <div class="wrapper">
-            <a title="Send me an email" href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>
-        </div>
-    </nav>
-
+    <header>
+  <div class="button-group" id="display-mode-controls" role="group" aria-labelledby="buttons-label">
+    <span class="label" id="buttons-label">Display mode</span>
+    <button class="active controls" type="button" value="okay">Plain</button><!--<button class="controls" type="button" value="bad">Bad UX</button>--><button class="controls" type="button" value="fancy">Fancy</button><button class="controls" type="button" value="emphatic">Emphatic!</button>
+  </div>
 </header>
-<main class="page-content" aria-label="Content">
-        <section id="welcome">
-    <div class="grid">
-        <div class="column" id="mobile-intro">
-          <h1>I'm Andrew Munroe, a digital producer and writer based in Vancouver.</h1>
-        </div>
-        <div class="column shrink">
-            <figure id="home">
-              <span class="card">
-                <span class="front">
-                  <img alt="a baby" class="round" src="assets/img/baby-andrew-munroe.jpg" width="200" height="200">
-                </span>
-                <span class="back">
-                  <img alt="a guy" class="round" src="assets/img/andrew-munroe.jpg" width="200" height="200">
-                </span>
-              </span>
-              <figcaption id="circlelife"><span id="then">then</span> / <span id="now">now</span></figcaption>
-            </figure>
-        </div>
-        <div class="column">
-          <h1 id="desktop-intro">I'm Andrew Munroe, a digital producer and writer based in Vancouver.</h1>
-          <p>I develop, design, manage, and write for digital projects — mostly things related to journalism, non-profits, and education. Check out some of my work below or say hello via <a href="mailto:mail@andrewmunroe.com">email</a>, <a href="https://ca.linkedin.com/in/andrewemunroe">LinkedIn</a>, or <a href="https://github.com/andrewmunroe">GitHub</a>.</p>
-        </div>
+<main aria-label="Content">
+  <section>
+    <span class="label" aria-hidden="true">h1</span>
+    <h1>I’m Andrew Munroe, an award-winning digital producer and writer based in Vancouver.</h1>
+  </section>
+  <section>
+    <h2 class="label">About me</h2>
+    <div class="flex">
+      <p>I develop, design, manage, and manage for digital projects — mostly things related to journalism, non-profits, and education. You can say hello via <a href="mailto:mail@andrewmunroe.com">email</a>, <a href="https://ca.linkedin.com/in/andrewemunroe">LinkedIn</a>, or <a href="https://github.com/andrewmunroe">GitHub</a>.</p>
+      <div id="profiles">
+        <figure><img class="round" width="80" height="80" src="assets/img/baby-andrew-munroe.jpg" alt="Andrew as a bébé" /><figcaption class="label">Then</figcaption></figure><figure><img class="round" width="80" height="80" src="assets/img/andrew-munroe.jpg" alt="Andrew as an adult" /><figcaption class="label">Now</figcaption></figure>
+      </div>
     </div>
-</section>
-<section>
-  <div class="list-container">
-    <h2>Journalism</h2>
-    <ul>
-      <li id="plastics">
-        <a href="https://globalreportingcentre.org/plastics/">
-          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div><div class="info">The house that plastic built<span>Writing, Design, Development, Data Viz</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li id="supplies">
-        <a href="https://globalreportingcentre.org/medical-supply-crisis/n95-masks/">
-          <div class="img-container"><img alt="FRONTLINE AP" src="assets/img/frontline-ap.jpg" /></div><div class="info">America's medical supply crisis<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li id="tyee">
-        <a href="https://thetyee.ca/big-melt/">
-          <div class="img-container"><img alt="The Tyee" src="assets/img/tyee.jpg" /></div><div class="info">The big melt<span>Design, Development, Data Viz</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li id="jersey">
-        <a href="https://globalreportingcentre.org/jersey-offshore/">
-          <div class="img-container"><img alt="Mother Jones" src="assets/img/motherjones.jpg" /></div><div class="info">Jersey offshore<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li id="turning">
-        <a href="https://globalreportingcentre.org/turning-points/">
-          <div class="img-container"><img alt="PBS Newshour" src="assets/img/pbs.png" /></div><div class="info">Turning points<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li id="fishmeal">
-        <a href="https://globalreportingprogram.org/fishmeal/">
-          <div class="img-container"><img alt="NBC News" src="assets/img/nbc.png" /></div><div class="info">The fish you (don't know you) eat<span>Design, Development, Strategy</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li id="school">
-        <a href="https://globalreportingprogram.org/beyond-school/norway">
-          <div class="img-container"><img alt="Global Reporting Program" src="assets/img/grp.jpg" /></div><div class="info">Beyond school<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="list-container">
-    <h2>Non-profit</h2>
-    <ul>
-      <li>
-        <a href="https://stanleyparkecology.ca">
-          <div class="img-container"><img alt="SPES" src="assets/img/spes.png" /></div><div class="info">Stanley Park Ecology Society<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li>
-        <a href="https://globalreportingcentre.org">
-          <div class="img-container"><img alt="GRC" src="assets/img/grc.jpg" /></div><div class="info">Global Reporting Centre<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li>
-        <a href="https://disabilityalliancebc.org/dtc-app/">
-          <div class="img-container"><img alt="DABC" src="assets/img/dabc.png" /></div><div class="info">Disability tax credit tool<span>Strategy, Writing, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="list-container">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <a href="https://ijb.utoronto.ca/">
-          <div class="img-container"><img alt="DLSPH" src="assets/img/dlsph.jpg" /></div><div class="info">IJB @ the University of Toronto's Dalla Lana School of Public Health<span>Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-      <li>
-        <a href="https://globalreportingprogram.org">
-          <div class="img-container"><img alt="GRC" src="assets/img/grp.jpg" /></div><div class="info">Global Reporting Program<span>Strategy, Design, Development</span></div><div class="arrow"><img alt="" aria-hidden="true" src="assets/img/arrow-forward-outline.svg" /></div>
-        </a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<script>
-  const homeFig = document.getElementById('home');
-  homeFig.addEventListener('click', function(event) {
-    homeFig.classList.toggle('flipped');
-  });
-</script>
-    </main>
+  </section>
+  <section>
+    <h2 class="label">Recent work</h2>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img class="wide" alt="Stanley Park Ecology Society" src="assets/img/spes.png" width="99" height="27" />
+        <h3><a href="https://thetyee.ca/big-melt/">Stanley Park Ecology Society</a></h3>
+        <span class="label">Design & Development & Strategy</span>
+      </div>
+      <p>A custom-made WordPress theme for SPES. This incorporated donation management and ticket sales through the Zeffy fundraising platform, event scheduling, and CRM integration via Zapier — with ease of use and maintainability as top priorities.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img alt="The Tyee" src="assets/img/tyee.svg" width="126" height="26" />
+        <h3><a href="https://thetyee.ca/big-melt/">The Big Melt</a></h3>
+        <span class="label">Art direction & Design & Development & Data Viz</span>
+      </div>
+      <p>This is the story of Klinaklini, one of the largest glaciers in North America, and the impacts of its accelerating melt rate. It was produced as an interactive feature with the Tyee and nominated for the 2022 DPA for Best Editorial Package.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img alt="Disability Alliance BC" src="assets/img/dabc.png" width="66" height="18" />
+        <h3><a href="https://disabilityalliancebc.org/dtc-app/">Disability Tax Credit Tool</a></h3>
+        <span class="label">Design & Development & Strategy</span>
+      </div>
+      <p>A Vue.js based tool for the Disability Alliance BC to simplify applying for federal tax credits. This tool was refined based on my own testing with NVDA, and in-person beta test feedback from people who use assistive technology.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img alt="FRONTLINE and PBS" src="assets/img/frontline-ap.png" width="66" height="18" />
+        <h3><a href="https://globalreportingcentre.org/medical-supply-crisis/n95-masks/">America’s Medical Supply Crisis</a></h3>
+        <span class="label">Art Direction & Design & Development</span>
+      </div>
+      <p>A project in collaboration with AP News and the PBS series FRONTLINE. I using SVG images and simple vanilla JS/CSS based animations. Nominated for a DPA for Best Digital Design.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img alt="NBC News" src="assets/img/nbc-news.svg" width="120" height="22" />
+        <h3><a href="https://globalreportingcentre.org/plastics/">The House that Plastic Built</a></h3>
+        <span class="label">Writing & Design & Development & Data Viz</span>
+      </div>
+      <p>An interactive feature story on the history of subsidies to the plastics industry. Co-produced by NBC News. Nominated for the 2022 DPA’s Best Science and Technology Storytelling.</p>
+    </div>
+  </section>
+</main>
+<footer><p>Want to work together? Drop me a line at <a href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>.</p></footer>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 
   </body>
 
