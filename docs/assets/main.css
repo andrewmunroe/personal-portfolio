@@ -92,6 +92,7 @@ div#profiles {
         transform: translate(-20px, 20px); } }
 
 button {
+  color: #191919;
   font-family: 'Inter', sans-serif;
   border: 1px solid #191919;
   background: none;
