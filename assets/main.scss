@@ -179,12 +179,19 @@ a {
   }
 }
 
-footer p a {
-  color: $white;
+footer p {
 
-  &:hover, &:focus {
-    background-color: $white;
-    color: $black;
+  > span:first-child {
+    display: none;
+  }
+
+  a {
+    color: $white;
+
+    &:hover, &:focus {
+      background-color: $white;
+      color: $black;
+    }
   }
 }
 
@@ -223,6 +230,10 @@ div.portfolio-item {
   p {
     margin-top: 1rem;
   }
+
+  &.hidden {
+    display: none;
+  }
 }
 
 /// Display Modes
@@ -243,4 +254,112 @@ body.fancy {
   figure img.round {
     border-color: $canary-m-burns;
   }
+}
+
+body.bad {
+  .button-group {
+    button {
+      transition: all 0.3s;
+      border-radius: 50%;
+      &:hover, &:focus {
+        padding: 4rem;
+      }
+    }
+    button.active {
+      transform: translate(20px, 70px);
+    }
+    button:first-of-type {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .label {
+    font-family: 'Papyrus', cursive;
+  }
+
+  h1 {
+    line-height: 0.3;
+    display: block;
+    padding: 2rem 0;
+
+    &:hover {
+      line-height: 7;
+      cursor: help;
+    }
+  }
+
+  .flex.portfolio-item {
+    display: block;
+    padding: 0;
+    border-bottom: 40px solid;
+
+    div.info {
+      margin: 0 auto;
+      min-width: 0;
+      width: 40px;
+      overflow-x: scroll;
+      border: 2px solid;
+    }
+    p {
+      text-align: justify;
+      max-width: none;
+    }
+
+    img {
+      height: 90px;
+      max-width: 20px;
+    }
+  }
+
+  p a {
+    font-family: serif;
+    font-size: 2rem;
+  }
+
+  a {
+    &:hover, &:focus {
+      color: $black;
+      background: $black;
+    }
+  }
+
+  #profiles {
+    figure:first-child {
+      img {
+        animation: waggle-left 0.7s reverse infinite;
+      }
+    }
+    figure:last-child {
+      img {
+        animation: waggle-up 1.3s infinite;
+      }
+    }
+  }
+
+  main section:last-of-type {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  footer p > span:first-child {
+    display: inline;
+  }
+
+  footer p > span + span {
+    display: none;
+  }
+}
+
+@keyframes waggle-left {
+  0% { transform:translateX(10px); }
+  50% { transform:translateX(-10px); }
+  100% { transform:translateX(10px); }
+}
+
+@keyframes waggle-up {
+  0% { transform:translateY(10px); }
+  50% { transform:translateY(-10px); }
+  100% { transform:translateY(0); }
 }

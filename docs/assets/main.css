@@ -163,6 +163,8 @@ a {
     background-color: #191919;
     color: #ffffff; }
 
+footer p > span:first-child {
+  display: none; }
 footer p a {
   color: #ffffff; }
   footer p a:hover, footer p a:focus {
@@ -193,6 +195,8 @@ div.portfolio-item {
       max-width: 100px; }
   div.portfolio-item p {
     margin-top: 1rem; }
+  div.portfolio-item.hidden {
+    display: none; }
 
 body.fancy {
   background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4); }
@@ -203,3 +207,72 @@ body.fancy {
     box-shadow: inset 0 0 0 0.1rem rgba(250, 255, 120, 0.8); }
   body.fancy figure img.round {
     border-color: #FAFF78; }
+
+body.bad .button-group button {
+  transition: all 0.3s;
+  border-radius: 50%; }
+  body.bad .button-group button:hover, body.bad .button-group button:focus {
+    padding: 4rem; }
+body.bad .button-group button.active {
+  transform: translate(20px, 70px); }
+body.bad .button-group button:first-of-type {
+  position: fixed;
+  top: 0;
+  right: 0; }
+body.bad .label {
+  font-family: 'Papyrus', cursive; }
+body.bad h1 {
+  line-height: 0.3;
+  display: block;
+  padding: 2rem 0; }
+  body.bad h1:hover {
+    line-height: 7;
+    cursor: help; }
+body.bad .flex.portfolio-item {
+  display: block;
+  padding: 0;
+  border-bottom: 40px solid; }
+  body.bad .flex.portfolio-item div.info {
+    margin: 0 auto;
+    min-width: 0;
+    width: 40px;
+    overflow-x: scroll;
+    border: 2px solid; }
+  body.bad .flex.portfolio-item p {
+    text-align: justify;
+    max-width: none; }
+  body.bad .flex.portfolio-item img {
+    height: 90px;
+    max-width: 20px; }
+body.bad p a {
+  font-family: serif;
+  font-size: 2rem; }
+body.bad a:hover, body.bad a:focus {
+  color: #191919;
+  background: #191919; }
+body.bad #profiles figure:first-child img {
+  animation: waggle-left 0.7s reverse infinite; }
+body.bad #profiles figure:last-child img {
+  animation: waggle-up 1.3s infinite; }
+body.bad main section:last-of-type {
+  padding: 0;
+  max-width: 100%; }
+body.bad footer p > span:first-child {
+  display: inline; }
+body.bad footer p > span + span {
+  display: none; }
+
+@keyframes waggle-left {
+  0% {
+    transform: translateX(10px); }
+  50% {
+    transform: translateX(-10px); }
+  100% {
+    transform: translateX(10px); } }
+@keyframes waggle-up {
+  0% {
+    transform: translateY(10px); }
+  50% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
