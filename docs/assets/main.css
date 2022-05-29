@@ -186,14 +186,19 @@ div.portfolio-item {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 2rem;
   margin-bottom: 2rem; }
+  @media (min-width: 34rem) {
+    div.portfolio-item {
+      align-items: center; } }
   div.portfolio-item div.info {
-    min-width: 220px;
+    min-width: 250px;
     padding-right: 2rem; }
   div.portfolio-item img {
     max-width: 60px;
     height: auto; }
     div.portfolio-item img.wide {
       max-width: 100px; }
+    div.portfolio-item img#dlsph {
+      max-width: 160px; }
   div.portfolio-item p {
     margin-top: 1rem; }
   div.portfolio-item.hidden {
@@ -221,7 +226,7 @@ body.bad .button-group button:first-of-type {
   top: 0;
   right: 0; }
 body.bad .label {
-  font-family: 'Papyrus', cursive; }
+  font-family: 'Papyrus', 'Copperplate Gothic', 'Impact', cursive; }
 body.bad h1 {
   line-height: 0.3;
   display: block;

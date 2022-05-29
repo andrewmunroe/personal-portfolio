@@ -42,3 +42,12 @@ function emphatisize() {
     element.tagName === 'H3' ? element.querySelector('a').innerText += '!!' : element.innerHTML = element.innerHTML.replaceAll('.', '!!');
   });
 }
+
+// Display more portfolio items
+const hiddenEls = document.querySelectorAll('.hidden');
+document.getElementById('more').addEventListener('click', function(event) {
+  event.target.remove();
+  if (hiddenEls) {
+    hiddenEls.forEach(el => el.classList.remove('hidden'));
+  }
+});

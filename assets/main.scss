@@ -50,7 +50,9 @@ footer {
 }
 
 div.flex {
-  @include medium { display: flex; }
+  @include medium {
+    display: flex;
+  }
 }
 
 div#profiles {
@@ -213,9 +215,10 @@ div.portfolio-item {
   border-bottom: 1px solid lighten($black, 70%);
   padding-bottom: 2rem;
   margin-bottom: 2rem;
+  @include medium { align-items: center; }
 
   div.info {
-    min-width: 220px;
+    min-width: 250px;
     padding-right: 2rem;
   }
 
@@ -225,6 +228,10 @@ div.portfolio-item {
 
     &.wide {
       max-width: 100px;
+    }
+
+    &#dlsph {
+      max-width: 160px;
     }
   }
 
@@ -277,7 +284,7 @@ body.bad {
   }
 
   .label {
-    font-family: 'Papyrus', cursive;
+    font-family: 'Papyrus', 'Copperplate Gothic', 'Impact', cursive;
   }
 
   h1 {
@@ -295,7 +302,6 @@ body.bad {
     display: block;
     padding: 0;
     border-bottom: 40px solid;
-
     div.info {
       margin: 0 auto;
       min-width: 0;
