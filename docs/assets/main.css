@@ -202,7 +202,7 @@ div.portfolio-item {
   div.portfolio-item p {
     margin-top: 1rem; }
   div.portfolio-item.hidden {
-    display: none; }
+    display: none !important; }
 
 body.fancy {
   background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4); }
