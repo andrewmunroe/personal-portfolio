@@ -45,9 +45,15 @@ function emphatisize() {
 
 // Display more portfolio items
 const hiddenEls = document.querySelectorAll('.hidden');
+let hiddenElsArray = Array.from(hiddenEls);
 document.getElementById('more').addEventListener('click', function(event) {
-  event.target.remove();
-  if (hiddenEls) {
-    hiddenEls.forEach(el => el.classList.remove('hidden'));
+  hiddenElsArray.forEach(function (el, index) {
+    if (index <= 3) {
+      el.classList.remove('hidden')
+    }
+  })
+  hiddenElsArray.splice(0, 4);
+  if (!hiddenElsArray.length) {
+    event.target.remove();
   }
 });
