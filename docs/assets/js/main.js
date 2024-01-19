@@ -24,12 +24,13 @@ function changeDisplayMode(target) {
 function setData(data) {
   if (body.classList.contains('emphatic')) {
     emphasisElements.forEach(element => {
-      element.tagName === 'H3' ? element.querySelector('a').innerText = element.querySelector('a').innerText.replace('!!', '') : element.innerHTML = element.innerHTML.replaceAll('!!', '.');
+      element.tagName === 'H3' ? element.querySelector('a').innerText = element.querySelector('a').innerText.replace('!!!', '') : element.innerHTML = element.innerHTML.replaceAll('!!!', '.');
     })
   }
   body.removeAttribute('class');
   if (data === 'bad') { body.classList.add('bad'); }
   else if (data === 'fancy') { body.classList.add('fancy'); }
+  else if (data === 'ants') { body.classList.add('ants'); }
   else if (data === 'emphatic') {
     body.classList.add('emphatic');
     emphatisize();
@@ -39,7 +40,7 @@ function setData(data) {
 function emphatisize() {
   body.classList.add('emphatic');
   emphasisElements.forEach(element => {
-    element.tagName === 'H3' ? element.querySelector('a').innerText += '!!' : element.innerHTML = element.innerHTML.replaceAll('.', '!!');
+    element.tagName === 'H3' ? element.querySelector('a').innerText += '!!!' : element.innerHTML = element.innerHTML.replaceAll('.', '!!!');
   });
 }
 

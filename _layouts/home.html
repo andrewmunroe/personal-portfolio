@@ -5,33 +5,29 @@ layout: default
 <header>
   <div class="button-group" id="display-mode-controls" role="group" aria-labelledby="buttons-label">
     <span class="label" id="buttons-label">Display mode</span>
-    <button class="active controls" type="button" value="okay">Okay UX</button><button class="controls" type="button" value="bad">Bad UX</button><button class="controls" type="button" value="fancy">Fancy</button><button class="controls" type="button" value="emphatic">Emphatic!!</button>
+    <button class="active controls" type="button" value="okay">Okay UX</button><button class="controls" type="button" value="bad">Bad UX</button><button class="controls" type="button" value="fancy">Fancy</button><button class="controls" type="button" value="emphatic">Emphatic</button><button class="controls" type="button" value="ants">For 🐜</button>
   </div>
 </header>
+<div class="content-wrapper">
 <main aria-label="Content">
   <section>
     <span class="label" aria-hidden="true">h1</span>
-    <h1>I’m Andrew Munroe, an award-winning digital producer and writer based in Vancouver.</h1>
+    <h1>I’m Andrew Munroe, an award-winning digital producer, designer, developer, and writer based in Vancouver.</h1>
   </section>
   <section>
-    <h2 class="label">About me</h2>
-    <div class="flex">
-      <p>I develop, design, manage, and write for digital projects — mostly things related to journalism, non-profits, and education. You can say hello via <a href="mailto:mail@andrewmunroe.com">email</a>, <a href="https://ca.linkedin.com/in/andrewemunroe">LinkedIn</a>, or <a href="https://github.com/andrewmunroe">GitHub</a>.</p>
+    <div class="flex contact">
+      <div>
+        <h2 class="label">About</h2>
+        <p>I work in the journalism, education, and non-profit sectors on interactive, visual, and/or data-driven projects.</p><p>I’ve worked with organizations including the Global Reporting Centre, Telus World of Science, NBC News, The Tyee, Okanagan College, the Associated Press, and the University of Toronto in a wide range of roles.</p>
+        <p>You can say hello via <a href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>, <a href="https://ca.linkedin.com/in/andrewemunroe">LinkedIn</a>, or <a href="https://github.com/andrewmunroe">GitHub</a>.</p>
+      </div>
       <div id="profiles">
         <figure><img class="round" width="80" height="80" src="assets/img/baby-andrew-munroe.jpg" alt="Andrew as a bébé" /><figcaption class="label">Then</figcaption></figure><figure><img class="round" width="80" height="80" src="assets/img/andrew-munroe.jpg" alt="Andrew as an adult" /><figcaption class="label">Now</figcaption></figure>
       </div>
     </div>
   </section>
   <section>
-    <h2 class="label">Recent work</h2>
-    <div class="flex portfolio-item">
-      <div class="info">
-        <img class="wide" alt="Global Reporting Program" src="assets/img/grp-logo-horizontal@4x.png" width="400" height="31" />
-        <h3><a href="https://globalreportingprogram.org">Global Reporting Program</a></h3>
-        <span class="label">Design & Development & Writing & Strategy</span>
-      </div>
-      <p>The GRP offers journalism students the chance to work on a long-form global investigation with a major media partner. Website created with Gatsby.js and Tailwind CSS.</p>
-    </div>
+    <h2 class="label">Projects</h2>
     <div class="flex portfolio-item">
       <div class="info">
         <img class="wide" alt="Telus World of Science Edmonton" src="assets/img/sw-logo.svg" width="100" height="30" />
@@ -42,35 +38,19 @@ layout: default
     </div>
     <div class="flex portfolio-item">
       <div class="info">
-        <img class="wide" alt="GRC" src="assets/img/Grc_Horizontallogo_Black_Logo_Full_Color_RGB.svg" width="100" height="8" />
-        <h3><a href="https://globalreportingcentre.org/reputational-attacks">Not Just Words</a></h3>
-        <span class="label">Design & Development & Data Viz & Writing</span>
+        <img class="wide" alt="Global Reporting Program" src="assets/img/grp-logo-horizontal@4x.png" width="400" height="31" />
+        <h3><a href="https://globalreportingprogram.org">Global Reporting Program</a></h3>
+        <span class="label">Design & Development & Writing & Strategy</span>
       </div>
-      <p>This feature explores survey and interview data related to reputational attacks against journalists. Made with Next.js, Tailwind, and Chart.js. Illustrations by Kathleen Fu.</p>
+      <p>The GRP offers journalism students the chance to work on a long-form global investigation with a major media partner. Website created with Gatsby.js and Tailwind CSS.</p>
     </div>
     <div class="flex portfolio-item">
       <div class="info">
-        <img class="wide" alt="Globe and Mail" src="assets/img/globe-and-mail.svg" width="120" height="22" />
-        <h3><a href="https://globalreportingprogram.org/growing-older/">Growing Older</a></h3>
-        <span class="label">Data Viz & Design & Development</span>
+        <img alt="NBC News" src="assets/img/nbc-news.svg" width="120" height="22" />
+        <h3><a href="https://globalreportingprogram.org/fishmeal">The Fish You (Don't Know You) Eat</a></h3>
+        <span class="label">Art Direction & Design & Development</span>
       </div>
-      <p>A feature series on the challenges and opportunities of an aging world, published in partnership with The Globe and Mail. I led data sourcing, analysis, and visualization, as well as design and web development. Illustrations by Peter Mothe.</p>
-    </div>
-    <div class="flex portfolio-item">
-      <div class="info">
-        <img class="wide" alt="Stanley Park Ecology Society" src="assets/img/spes.png" width="99" height="27" />
-        <h3><a href="https://stanleyparkecology.ca">Stanley Park Ecology Society</a></h3>
-        <span class="label">Design & Development & Strategy</span>
-      </div>
-      <p>A custom-made WordPress theme for SPES. This incorporated donation management and ticket sales through the Zeffy fundraising platform, event scheduling, and CRM integration via Zapier — with ease of use and maintainability as top priorities.</p>
-    </div>
-    <div class="flex portfolio-item">
-      <div class="info">
-        <img class="wide" alt="GRC" src="assets/img/Grc_Horizontallogo_Black_Logo_Full_Color_RGB.svg" width="100" height="8" />
-        <h3><a href="https://globalreportingcentre.org/">Global Reporting Centre</a></h3>
-        <span class="label">Design & Development & Strategy & Writing</span>
-      </div>
-      <p>Planning, design, and development of a new organizational website for the GRC. The site was implemented with the latest features of WordPress 6, including its relatively new block-based approach to theme building that enables WYSIWYG full site editing for admins. Branding and additional design by Alicia Carvalho.</p>
+      <p>In collaboration with NBC News, this project looked at the hidden costs of the global fishmeal industry in China, Peru and West Africa. Won the 2020 DPA for Best Digital Editorial Package.</p>
     </div>
     <div class="flex portfolio-item">
       <div class="info">
@@ -82,10 +62,58 @@ layout: default
     </div>
     <div class="flex portfolio-item">
       <div class="info">
+        <img alt="The Tyee" src="assets/img/tyee.svg" width="126" height="26" />
+        <h3><a href="https://thetyee.ca/big-melt/">The Big Melt</a></h3>
+        <span class="label">Art direction & Design & Development & Data Viz</span>
+      </div>
+      <p>This is the story of Klinaklini, one of the largest glaciers in North America, and the impacts of its accelerating melt rate. Written by Christopher Pollon, it was produced as an interactive feature with the Tyee and nominated for the 2022 DPA for Best Editorial Package. Additional art and design by David Marino.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img class="wide" alt="GRC" src="assets/img/Grc_Horizontallogo_Black_Logo_Full_Color_RGB.svg" width="100" height="8" />
+        <h3><a href="https://globalreportingcentre.org/reputational-attacks">Not Just Words</a></h3>
+        <span class="label">Design & Development & Data Viz & Writing</span>
+      </div>
+      <p>This feature explores survey and interview data related to reputational attacks against journalists. Made with Next.js, Tailwind, and Chart.js. Illustrations by Kathleen Fu.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img alt="FRONTLINE and PBS" src="assets/img/frontline-ap.png" width="66" height="18" />
+        <h3><a href="https://globalreportingcentre.org/medical-supply-crisis/n95-masks/">America’s Medical Supply Crisis</a></h3>
+        <span class="label">Art Direction & Design & Development</span>
+      </div>
+      <p>A project in collaboration with AP News and the PBS series FRONTLINE. Done using SVG images and CSS based animations. Nominated for a DPA for Best Digital Design. Illustrations by Peter Hamlin.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img class="wide" alt="GRC" src="assets/img/Grc_Horizontallogo_Black_Logo_Full_Color_RGB.svg" width="100" height="8" />
+        <h3><a href="https://globalreportingcentre.org/">Global Reporting Centre</a></h3>
+        <span class="label">Design & Development & Strategy & Writing</span>
+      </div>
+      <p>Planning, design, and development of a new organizational website for the GRC. The site was implemented with the latest features of WordPress 6, including its relatively new block-based approach to theme building that enables WYSIWYG full site editing for admins. Branding and additional design by Alicia Carvalho.</p>
+    </div>
+    <div class="flex portfolio-item">
+      <div class="info">
         <h3><a href="https://andrewmunroe.com/Andrew_Munroe_Writing_Portfolio.pdf">Writing Samples</a></h3>
         <span class="label">Writing & Design</span>
       </div>
       <p>A selection of writing samples and design documentation from projects ranging from an interactive Mars Rover exhibit at the HR MacMillan Space Centre to a satirical apocalypse training game.</p>
+    </div>
+    <div class="flex portfolio-item hidden">
+      <div class="info">
+        <img alt="The Tyee" src="assets/img/tyee.svg" width="126" height="26" />
+        <h3><a href="https://thetyee.ca/News/2023/04/03/Bracing-For-Disasters/">Bracing for Disasters</a></h3>
+        <span class="label">Art direction & Design & Development & Data Viz</span>
+      </div>
+      <p>A special series written by Francesca Fionda, in partnership between The Tyee and the Climate Disaster Project. Nominated for the 2023 Webster Award in Excellence in Environmental Reporting.</p>
+    </div>
+    <div class="flex portfolio-item hidden">
+      <div class="info">
+        <img class="wide" alt="Globe and Mail" src="assets/img/globe-and-mail.svg" width="120" height="22" />
+        <h3><a href="https://globalreportingprogram.org/growing-older/">Growing Older</a></h3>
+        <span class="label">Data Viz & Design & Development</span>
+      </div>
+      <p>A feature series on the challenges and opportunities of an aging world, published in partnership with The Globe and Mail. I led data sourcing, analysis, and visualization, as well as design and web development. Illustrations by Peter Mothe.</p>
     </div>
     <div class="flex portfolio-item hidden">
       <div class="info">
@@ -97,14 +125,6 @@ layout: default
     </div>
     <div class="flex portfolio-item hidden">
       <div class="info">
-        <img alt="The Tyee" src="assets/img/tyee.svg" width="126" height="26" />
-        <h3><a href="https://thetyee.ca/big-melt/">The Big Melt</a></h3>
-        <span class="label">Art direction & Design & Development & Data Viz</span>
-      </div>
-      <p>This is the story of Klinaklini, one of the largest glaciers in North America, and the impacts of its accelerating melt rate. It was produced as an interactive feature with the Tyee and nominated for the 2022 DPA for Best Editorial Package. Additional art and design by David Marino.</p>
-    </div>
-    <div class="flex portfolio-item hidden">
-      <div class="info">
         <img alt="Mother Jones" src="assets/img/motherjones.svg" width="98" height="20" />
         <h3><a href="https://globalreportingcentre.org/jersey-offshore/">How to Conceal Your Money Offshore</a></h3>
         <span class="label">Art Direction & Design & Development</span>
@@ -113,11 +133,11 @@ layout: default
     </div>
     <div class="flex portfolio-item hidden">
       <div class="info">
-        <img alt="FRONTLINE and PBS" src="assets/img/frontline-ap.png" width="66" height="18" />
-        <h3><a href="https://globalreportingcentre.org/medical-supply-crisis/n95-masks/">America’s Medical Supply Crisis</a></h3>
-        <span class="label">Art Direction & Design & Development</span>
+        <img class="wide" alt="Stanley Park Ecology Society" src="assets/img/spes.png" width="99" height="27" />
+        <h3><a href="https://stanleyparkecology.ca">Stanley Park Ecology Society</a></h3>
+        <span class="label">Design & Development & Strategy</span>
       </div>
-      <p>A project in collaboration with AP News and the PBS series FRONTLINE. Done using SVG images and CSS based animations. Nominated for a DPA for Best Digital Design. Illustrations by Peter Hamlin.</p>
+      <p>A custom-made WordPress theme for SPES. This incorporated donation management and ticket sales through the Zeffy fundraising platform, event scheduling, and CRM integration via Zapier — with ease of use and maintainability as top priorities.</p>
     </div>
     <div class="flex portfolio-item hidden">
       <div class="info">
@@ -126,14 +146,6 @@ layout: default
         <span class="label">Design & Development & Strategy</span>
       </div>
       <p>The IJB is a new unit at the Dalla Lana School of Public Health that focuses on collaborative investigative journalism and training the next generation of reporters. I designed and developed a WordPress theme for their launch.</p>
-    </div>
-    <div class="flex portfolio-item hidden">
-      <div class="info">
-        <img alt="NBC News" src="assets/img/nbc-news.svg" width="120" height="22" />
-        <h3><a href="https://globalreportingprogram.org/fishmeal">The Fish You (Don't Know You) Eat</a></h3>
-        <span class="label">Art Direction & Design & Development</span>
-      </div>
-      <p>In collaboration with NBC News, this project looked at the hidden costs of the global fishmeal industry in China, Peru and West Africa. Won the 2020 DPA for Best Digital Editorial Package.</p>
     </div>
     <div class="flex portfolio-item hidden">
       <div class="info">
@@ -152,5 +164,13 @@ layout: default
     </div>
     <button id="more">Show more +</button>
   </section>
+  <section>
+    <h2 class="label">Elegant wall of text</h2>
+    <p>Here are some of the tools and skills I’ve used in <span class="web">web</span>, <span class="prod">production</span>, or <span class="des">design</span> projects:</p>
+    <ul class="skills-wall">
+        <li><span class="web">html/css</span>sass, tailwind, css frameworks, semantic html, markdown/mdx, wcag</li><li><span class="web">JavaScript</span>vanilla, react, vue, firebase</li><li><span class="web">Static site generators</span>gatsby, jekyll, next, docusaurus</li><li><span class="web">Content management systems (CMS)</span>implementation, migration, management, and custom dev on wordpress, drupal, ghost, bricolage</li><li><span class="web">Tools</span>git, vs code, task runners, npm, apis (Vimeo, google maps, WordPress REST)</li><li><span class="web">Server/IT management & security</span>digital ocean, cloudflare, password managers, g workspace admin</li><li><span class="web">Data & visualization</span>chart js, d3, advanced excel/sheets, custom maps</li><li><span class="web">Web animation</span>three js, css, adobe animate</li><li><span class="web">Performance & testing</span>g & cf analytics, lighthouse, lambdatest, browserstack</li><li><span class="prod">Producing & pm</span>managing teams and projects using tools like airtable, budibase, trello, slack</li><li><span class="prod">Writing & editing</span>creative, copywriting, interactive, grants, reports</li><li><span class="prod">Donations, tickets, & CRM</span>mailchimp, zeffy, gathercontent, monday, zapier</li><li><span class="prod">SEO</span>yoast, schema, opengraph, metadata</li><li><span class="prod">Research & analysis</span>journalistic, data, academic, lit review, environmental scans</li><li><span class="prod">Partnerships</span>stakeholder and client relations</li><li><span class="des">Design</span>canva, photoshop, indesign, acrobat pro, illustrator, basic video with premiere, after effects, media encoder</li><li><span class="des">UI/UX & prototyping</span>user journeys, storyboards, a/b testing, draw.io, adobe xd/figma</li><li><span class="des">Accessibility</span>Web Content Accessibility Guidelines compliance, testing with assistive tech</li><li><span class="des">Creative leadership</span>content strategy, art direction, contractor partnerships</li>
+    </ul>
+  </section>
 </main>
 <footer><p><span>(Still) want</span><span>Want</span> to work together? Drop me a line at <a href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>.</p></footer>
+</div>

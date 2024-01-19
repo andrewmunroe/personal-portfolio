@@ -33,9 +33,12 @@ body {
   line-height: 1.7; }
 
 section, header {
-  margin-top: 3rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
   max-width: 54rem; }
+  @media (min-width: 20rem) {
+    section, header {
+      padding: 1rem 2rem; } }
   @media (min-width: 34rem) {
     section, header {
       padding: 2rem; } }
@@ -60,21 +63,45 @@ footer {
 @media (min-width: 34rem) {
   div.flex {
     display: flex; } }
+div.flex.contact {
+  align-items: center; }
+
+.skills-wall-container {
+  display: flex;
+  order: 1; }
+
+ul.skills-wall {
+  margin-top: 1rem;
+  line-height: 1.2;
+  text-transform: lowercase; }
+  ul.skills-wall li {
+    width: 100%;
+    font-size: 0.7rem;
+    display: inline; }
+    ul.skills-wall li span {
+      margin: 0 0.2rem; }
+    ul.skills-wall li:first-of-type span {
+      margin: 0 0.2rem 0 0; }
+
+span.web {
+  background: #cef1ff; }
+
+span.prod {
+  background: #cefff1; }
+
+span.des {
+  background: #ffceec; }
 
 div#profiles {
   padding: 1rem 0 0 0; }
   @media (min-width: 34rem) {
     div#profiles {
       min-width: 160px;
-      min-height: 150px;
-      padding: 0 0 0 1rem;
-      transform: translateY(-10px);
-      text-align: center; } }
+      padding: 0 0 0 1rem; } }
   @media (min-width: 42rem) {
     div#profiles {
       padding: 0 0 0 2rem;
-      min-width: 200px;
-      background: none; } }
+      min-width: 200px; } }
   div#profiles figure {
     display: inline-block; }
     div#profiles figure figcaption.label {
@@ -99,10 +126,13 @@ button {
   padding: 0.75rem 1rem;
   text-transform: uppercase;
   min-width: 110px;
-  width: 49%;
+  width: 100%;
   font-size: 0.7rem;
   cursor: pointer;
   transition: all 0.15s; }
+  @media (min-width: 20rem) {
+    button {
+      width: 49%; } }
   @media (min-width: 34rem) {
     button {
       width: auto; } }
@@ -116,28 +146,26 @@ button {
   display: inline-block;
   margin-right: 1%;
   margin-bottom: 1%; }
-  @media (min-width: 34rem) {
-    .button-group button:first-of-type {
-      border-top-left-radius: 0.3rem;
-      border-bottom-left-radius: 0.3rem; }
-    .button-group button:last-of-type {
-      border-top-right-radius: 0.3rem;
-      border-bottom-right-radius: 0.3rem; } }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 900;
   line-height: 1.4;
   color: #ffffff;
   display: inline;
   background: #191919;
   transition: all 0.15s; }
+  @media (min-width: 20rem) {
+    h1 {
+      font-size: 1.6rem; } }
   @media (min-width: 34rem) {
     h1 {
       font-size: 2rem; } }
   @media (min-width: 42rem) {
     h1 {
-      font-size: 3rem; } }
+      font-size: 2.4rem; } }
+  h1 + p {
+    margin-top: 1rem; }
 
 h3 {
   line-height: 1.4;
@@ -145,6 +173,7 @@ h3 {
   font-size: 1.3rem; }
 
 p {
+  margin-top: 1rem;
   max-width: 38rem; }
 
 .label {
@@ -153,13 +182,14 @@ p {
   font-size: 0.6rem;
   letter-spacing: 2px;
   margin-bottom: 1rem; }
+  .label + .flex.portfolio-item {
+    margin-top: 1.5rem; }
 
 a {
   text-decoration: none;
-  font-weight: 900;
   color: #191919;
   transition: all 0.15s;
-  border-bottom: 1px dotted; }
+  border-bottom: 1px solid; }
   a:hover, a:focus {
     background-color: #191919;
     color: #ffffff; }
@@ -182,6 +212,33 @@ figure img.round {
       width: 90px;
       height: 90px; } }
 
+@media (min-width: 34rem) {
+  div.cards {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-gap: 2.5rem; } }
+
+div.card a {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px #ebebeb, 0 2px 4px -2px #ebebeb;
+  text-decoration: none;
+  border-bottom: 0; }
+  div.card a div {
+    padding: 1rem; }
+    div.card a div h3 {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem; }
+    div.card a div .label {
+      margin-top: 0.5rem;
+      margin-bottom: 0; }
+    div.card a div strong {
+      font-weight: 900; }
+  div.card a img {
+    align-self: stretch;
+    object-fit: cover;
+    max-width: 120px; }
+
 div.portfolio-item {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 2rem;
@@ -199,20 +256,8 @@ div.portfolio-item {
       max-width: 100px; }
     div.portfolio-item img#dlsph {
       max-width: 160px; }
-  div.portfolio-item p {
-    margin-top: 1rem; }
   div.portfolio-item.hidden {
     display: none !important; }
-
-body.fancy {
-  background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4); }
-  body.fancy h1, body.fancy button.active, body.fancy a:hover, body.fancy a:focus {
-    background: #FAFF78;
-    color: #191919; }
-  body.fancy button:hover, body.fancy button:focus {
-    box-shadow: inset 0 0 0 0.1rem rgba(250, 255, 120, 0.8); }
-  body.fancy figure img.round {
-    border-color: #FAFF78; }
 
 body.bad .button-group button {
   transition: all 0.3s;
@@ -267,6 +312,39 @@ body.bad footer p > span:first-child {
   display: inline; }
 body.bad footer p > span + span {
   display: none; }
+
+body.fancy {
+  background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4); }
+  body.fancy h1, body.fancy button.active, body.fancy a:hover, body.fancy a:focus {
+    background: #FAFF78;
+    color: #191919; }
+  body.fancy button:hover, body.fancy button:focus {
+    box-shadow: inset 0 0 0 0.1rem rgba(250, 255, 120, 0.8); }
+  body.fancy figure img.round {
+    border-color: #FAFF78; }
+  body.fancy div.card a {
+    background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4);
+    box-shadow: 0 4px 6px -1px #cff1f2, 0 2px 4px -2px #f8fdc9; }
+    body.fancy div.card a img {
+      filter: hue-rotate(180deg); }
+    body.fancy div.card a:hover {
+      background: #FAFF78; }
+
+.content-wrapper {
+  transition: transform 0.15s;
+  transform-origin: top; }
+
+body.ants .content-wrapper {
+  transform: scale(0.33); }
+  @media (min-width: 20rem) {
+    body.ants .content-wrapper {
+      transform: scale(0.25); } }
+  @media (min-width: 34rem) {
+    body.ants .content-wrapper {
+      transform: scale(0.2); } }
+  @media (min-width: 42rem) {
+    body.ants .content-wrapper {
+      transform: scale(0.15); } }
 
 @keyframes waggle-left {
   0% {

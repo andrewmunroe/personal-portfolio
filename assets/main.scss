@@ -9,6 +9,12 @@ $black: #191919;
 $white: #ffffff;
 $canary-m-burns: #FAFF78;
 
+@mixin small {
+  @media (min-width: 20rem) {
+    @content;
+  }
+}
+
 @mixin medium {
   @media (min-width: 34rem) {
     @content;
@@ -28,8 +34,9 @@ body {
 }
 
 section, header {
-  margin-top: 3rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  @include small { padding: 1rem 2rem; }
   @include medium { padding: 2rem; }
   @include large { padding: 2rem 6rem; }
   max-width: 54rem;
@@ -53,21 +60,55 @@ div.flex {
   @include medium {
     display: flex;
   }
+
+  &.contact {
+    align-items: center;
+  }
 }
+
+.skills-wall-container {
+  display: flex;
+  order: 1;
+}
+
+ul.skills-wall {
+  margin-top: 1rem;
+  line-height: 1.2;
+  text-transform: lowercase;
+  li {
+    width: 100%;
+    font-size: 0.7rem;
+    display: inline;
+    span {
+      margin: 0 0.2rem;
+    }
+    &:first-of-type {
+      span {
+        margin: 0 0.2rem 0 0;
+      }
+    }
+  }
+}
+
+span.web {
+  background: #cef1ff;
+};
+span.prod {
+  background: #cefff1;
+};
+span.des {
+  background: #ffceec;
+};
 
 div#profiles {
   padding: 1rem 0 0 0;
   @include medium {
     min-width: 160px;
-    min-height: 150px;
     padding: 0 0 0 1rem;
-    transform: translateY(-10px);
-    text-align: center;
   }
   @include large {
     padding: 0 0 0 2rem;
     min-width: 200px;
-    background: none;
   }
   figure {
     display: inline-block;
@@ -102,7 +143,8 @@ button {
   padding: 0.75rem 1rem;
   text-transform: uppercase;
   min-width: 110px;
-  width: 49%;
+  width: 100%;
+  @include small { width: 49%; }
   @include medium { width: auto; }
   font-size: 0.7rem;
   cursor: pointer;
@@ -119,36 +161,28 @@ button {
 }
 
 .button-group {
-
   button {
     display: inline-block;
     margin-right: 1%;
     margin-bottom: 1%;
-
-    @include medium {
-      &:first-of-type {
-        border-top-left-radius: 0.3rem;
-        border-bottom-left-radius: 0.3rem;
-      }
-
-      &:last-of-type {
-        border-top-right-radius: 0.3rem;
-        border-bottom-right-radius: 0.3rem;
-      }
-    }
   }
 }
 
 h1 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  @include small { font-size: 1.6rem; }
   @include medium { font-size: 2rem; }
-  @include large { font-size: 3rem; }
+  @include large { font-size: 2.4rem; }
   font-weight: 900;
   line-height: 1.4;
   color: $white;
   display: inline;
   background: $black;
   transition: all 0.15s;
+
+  + p {
+    margin-top: 1rem;
+  }
 }
 
 h3 {
@@ -158,6 +192,7 @@ h3 {
 }
 
 p {
+  margin-top: 1rem;
   max-width: 38rem;
 }
 
@@ -167,14 +202,17 @@ p {
   font-size: 0.6rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
+
+  + .flex.portfolio-item {
+    margin-top: 1.5rem;
+  }
 }
 
 a {
   text-decoration: none;
-  font-weight: 900;
   color: $black;
   transition: all 0.15s;
-  border-bottom: 1px dotted;
+  border-bottom: 1px solid;
 
   &:hover, &:focus {
     background-color: $black;
@@ -211,6 +249,43 @@ figure {
   }
 }
 
+div.cards {
+  @include medium {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-gap: 2.5rem;
+  }
+}
+
+div.card {
+  a {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px #ebebeb, 0 2px 4px -2px #ebebeb;
+    text-decoration: none;
+    border-bottom: 0;
+    div {
+      padding: 1rem;
+      h3 {
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+      }
+      .label {
+        margin-top: 0.5rem;
+        margin-bottom: 0;
+      }
+      strong {
+        font-weight: 900;
+      }
+    }
+    img {
+      align-self: stretch;
+      object-fit: cover;
+      max-width: 120px;
+    }
+  }
+}
+
 div.portfolio-item {
   border-bottom: 1px solid lighten($black, 70%);
   padding-bottom: 2rem;
@@ -235,10 +310,6 @@ div.portfolio-item {
     }
   }
 
-  p {
-    margin-top: 1rem;
-  }
-
   &.hidden {
     display: none !important;
   }
@@ -246,23 +317,6 @@ div.portfolio-item {
 
 /// Display Modes
 //////////////////
-/// fancy
-
-body.fancy {
-  background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4);
-  h1, button.active, a:hover, a:focus {
-    background: $canary-m-burns;
-    color: $black;
-  }
-  button {
-    &:hover, &:focus {
-      box-shadow: inset 0 0 0 0.1rem transparentize($canary-m-burns, 0.2);
-    }
-  }
-  figure img.round {
-    border-color: $canary-m-burns;
-  }
-}
 
 body.bad {
   .button-group {
@@ -356,6 +410,46 @@ body.bad {
 
   footer p > span + span {
     display: none;
+  }
+}
+
+body.fancy {
+  background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4);
+  h1, button.active, a:hover, a:focus {
+    background: $canary-m-burns;
+    color: $black;
+  }
+  button {
+    &:hover, &:focus {
+      box-shadow: inset 0 0 0 0.1rem transparentize($canary-m-burns, 0.2);
+    }
+  }
+  figure img.round {
+    border-color: $canary-m-burns;
+  }
+  div.card a {
+    background: linear-gradient(to bottom left, #C1EDFF, #FDFFC4);
+    box-shadow: 0 4px 6px -1px #cff1f2, 0 2px 4px -2px #f8fdc9;
+    img {
+      filter: hue-rotate(180deg);
+    }
+    &:hover {
+      background: $canary-m-burns;
+    }
+  }
+}
+
+.content-wrapper {
+  transition: transform 0.15s;
+  transform-origin: top;
+}
+
+body.ants {
+  .content-wrapper {
+    transform: scale(0.33);
+    @include small { transform: scale(0.25); }
+    @include medium { transform: scale(0.2); }
+    @include large { transform: scale(0.15); }
   }
 }
 
