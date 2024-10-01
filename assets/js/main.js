@@ -1,6 +1,6 @@
 const controls = document.querySelectorAll('.controls');
 const body = document.body;
-let emphasisElements = document.querySelectorAll('main p, main h1, main h3');
+let emphasisElements = document.querySelectorAll('main h1, main h3, main h2 + p, .portfolio-item p');
 
 controls.forEach(control => control.addEventListener('click', event => {
   const target = event.target;
@@ -30,7 +30,6 @@ function setData(data) {
   body.removeAttribute('class');
   if (data === 'bad') { body.classList.add('bad'); }
   else if (data === 'fancy') { body.classList.add('fancy'); }
-  else if (data === 'ants') { body.classList.add('ants'); }
   else if (data === 'emphatic') {
     body.classList.add('emphatic');
     emphatisize();
@@ -57,4 +56,14 @@ document.getElementById('more').addEventListener('click', function(event) {
   if (!hiddenElsArray.length) {
     event.target.remove();
   }
+});
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  slidesOffsetBefore: 30,
+  slidesOffsetAfter: 30,
+  freeMode: true,
+  a11y: true
 });

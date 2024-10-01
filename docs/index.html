@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/main.css">
 </head><body>
 
     <header>
   <div class="button-group" id="display-mode-controls" role="group" aria-labelledby="buttons-label">
     <span class="label" id="buttons-label">Display mode</span>
-    <button class="active controls" type="button" value="okay">Okay UX</button><button class="controls" type="button" value="bad">Bad UX</button><button class="controls" type="button" value="fancy">Fancy</button><button class="controls" type="button" value="emphatic">Emphatic</button><button class="controls" type="button" value="ants">For 🐜</button>
+    <button class="active controls" type="button" value="okay">Okay UX</button><button class="controls" type="button" value="bad">Bad UX</button><button class="controls" type="button" value="fancy">Fancy</button><button class="controls" type="button" value="emphatic">Emphatic</button>
   </div>
 </header>
-<div class="content-wrapper">
 <main aria-label="Content">
   <section>
     <span class="label" aria-hidden="true">h1</span>
@@ -27,7 +27,7 @@
     <div class="flex contact">
       <div>
         <h2 class="label">About</h2>
-        <p>I work in the journalism, higher education, and non-profit sectors on interactive, visual, and/or data-driven projects.</p><p>I’ve worked with organizations including the Global Reporting Centre, Telus World of Science, NBC News, The Tyee, Okanagan College, the Associated Press, and the University of Toronto in a wide range of roles.</p>
+        <p>I work in the journalism, higher education, and non-profit sectors on a wide range of digital projects. Some of the organizations I’ve worked with include the Global Reporting Centre, TELUS World of Science, NBC News, The Tyee, Okanagan College, the Associated Press, Stanley Park Ecology Society, and the University of Toronto.
         <p>You can say hello via <a href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>, <a href="https://ca.linkedin.com/in/andrewemunroe">LinkedIn</a>, or <a href="https://github.com/andrewmunroe">GitHub</a>.</p>
       </div>
       <div id="profiles">
@@ -35,15 +35,46 @@
       </div>
     </div>
   </section>
+  <section id="featured">
+    <h2 class="label">Featured project</h2>
+    <div class="flex portfolio-item">
+      <div class="info">
+        <img alt="Disability Alliance BC" src="assets/img/dabc-logo.png" width="845" height="394" />
+        <h3><a href="https://mydtc.dabc.ca">Disability Tax Credit Tool</a></h3>
+        <span class="label">Design & Development & Writing & Editing</span>
+      </div>
+      <p>In partnership with Disability Alliance BC, I designed, developed, and contributed content to an accessibility-focused React and Gatsby-based interactive guide to the Canadian Disability Tax Credit. The guide includes detailed information and tools to help people apply.</p>
+    </div>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img alt="My DTC homepage screenshot" src="assets/img/mydtc-1.jpg" width="2190" height="1525" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="My DTC homepage screenshot" src="assets/img/mydtc-2.jpg" width="2190" height="1525" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="My DTC PDF builder screenshot" src="assets/img/mydtc-3.jpg" width="2190" height="1525" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="My DTC wireframe" src="assets/img/mydtc-4.jpg" width="2190" height="1525" />
+        </div>
+        <div class="swiper-slide">
+          <img alt="My DTC mockups" src="assets/img/mydtc-5.jpg" width="2190" height="1525" />
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
-    <h2 class="label">Projects</h2>
+    <h2 class="label">Other projects</h2>
     <div class="flex portfolio-item">
       <div class="info">
         <img class="wide" alt="Telus World of Science Edmonton" src="assets/img/sw-logo.svg" width="100" height="30" />
         <h3><a href="https://telusworldofscienceedmonton.ca/explore/experiences/arctic-journey/">Arctic Journey Gallery Exhibits</a></h3>
         <span class="label">Writing & Editing & Content Mgmt</span>
       </div>
-      <p>I contributed writing, research, editing, and content management on several interactive exhibits within a new gallery at Telus World of Science Edmonton. The gallery focuses on people and ecosystems of the Arctic, and was led by ngx Interactive.</p>
+      <p>I contributed writing, research, editing, and content management on several interactive exhibits within a new multi-part gallery at TELUS World of Science Edmonton.</p>
     </div>
     <div class="flex portfolio-item">
       <div class="info">
@@ -51,7 +82,7 @@
         <h3><a href="https://globalreportingprogram.org">Global Reporting Program</a></h3>
         <span class="label">PM & Design & Development & Writing & Strategy</span>
       </div>
-      <p>The GRP offers journalism students the chance to work on a long-form global investigation with a major media partner. Website created with Gatsby.js and Tailwind CSS.</p>
+      <p>The GRP offers graduate students the chance to work on a long-form global investigation with a major media partner. Website created with Gatsby and Tailwind CSS.</p>
     </div>
     <div class="flex portfolio-item">
       <div class="info">
@@ -59,23 +90,7 @@
         <h3><a href="https://globalreportingprogram.org/fishmeal">The Fish You (Don't Know You) Eat</a></h3>
         <span class="label">Art Direction & Design & Development</span>
       </div>
-      <p>In collaboration with NBC News, this project looked at the hidden costs of the global fishmeal industry in China, Peru and West Africa. Won the 2020 DPA for Best Digital Editorial Package.</p>
-    </div>
-    <div class="flex portfolio-item">
-      <div class="info">
-        <img alt="Disability Alliance BC" src="assets/img/dabc.png" width="66" height="18" />
-        <h3><a href="https://disabilityalliancebc.org/dtc-app/">Disability Tax Credit Tool</a></h3>
-        <span class="label">Design & Development & Strategy</span>
-      </div>
-      <p>A Vue.js-based tool for the Disability Alliance BC to simplify applying for federal tax credits. This tool was refined based on my own testing with NVDA, and in-person beta test feedback from people who use assistive technology.</p>
-    </div>
-    <div class="flex portfolio-item">
-      <div class="info">
-        <img alt="The Tyee" src="assets/img/tyee.svg" width="126" height="26" />
-        <h3><a href="https://thetyee.ca/big-melt/">The Big Melt</a></h3>
-        <span class="label">Art direction & Design & Development & Data Viz</span>
-      </div>
-      <p>This is the story of Klinaklini, one of the largest glaciers in North America, and the impacts of its accelerating melt rate. Written by Christopher Pollon, it was produced as an interactive feature with the Tyee and nominated for the 2022 DPA for Best Editorial Package. Additional art and design by David Marino.</p>
+      <p>In collaboration with NBC News, this project looked at the hidden costs of the global fishmeal industry in China, Peru and West Africa. Won a DPA for Best Digital Editorial Package.</p>
     </div>
     <div class="flex portfolio-item">
       <div class="info">
@@ -83,9 +98,17 @@
         <h3><a href="https://globalreportingcentre.org/reputational-attacks">Not Just Words</a></h3>
         <span class="label">PM & Design & Development & Data Viz & Writing</span>
       </div>
-      <p>This feature explores survey and interview data related to reputational attacks against journalists. Made with Next.js, Tailwind, and Chart.js. Illustrations by Kathleen Fu.</p>
+      <p>This feature explores survey and interview data related to reputational attacks against journalists. Made with Next.js, Tailwind, and Chart.js. Illustrations by Kathleen Fu. Nominated for a DPA for best Data Journalism.</p>
     </div>
-    <div class="flex portfolio-item">
+    <div class="flex portfolio-item hidden">
+      <div class="info">
+        <img alt="The Tyee" src="assets/img/tyee.svg" width="126" height="26" />
+        <h3><a href="https://thetyee.ca/big-melt/">The Big Melt</a></h3>
+        <span class="label">Art direction & Design & Development & Data Viz</span>
+      </div>
+      <p>This is the story of Klinaklini, one of the largest glaciers in North America, and the impacts of its accelerating melt rate. Written by Christopher Pollon, it was produced as an interactive feature with the Tyee and nominated for a DPA for Best Editorial Package. Additional art and design by David Marino.</p>
+    </div>
+    <div class="flex portfolio-item hidden">
       <div class="info">
         <img alt="FRONTLINE and PBS" src="assets/img/frontline-ap.png" width="66" height="18" />
         <h3><a href="https://globalreportingcentre.org/medical-supply-crisis/n95-masks/">America’s Medical Supply Crisis</a></h3>
@@ -93,7 +116,15 @@
       </div>
       <p>A project in collaboration with AP News and the PBS series FRONTLINE. Done using SVG images and CSS based animations. Nominated for a DPA for Best Digital Design. Illustrations by Peter Hamlin.</p>
     </div>
-    <div class="flex portfolio-item">
+    <div class="flex portfolio-item hidden">
+      <div class="info">
+        <img alt="The Tyee" src="assets/img/tyee.svg" width="126" height="26" />
+        <h3><a href="https://thetyee.ca/News/2024/05/31/Indigenous-Marine-Protected-Conserved-Areas/">Mapping the Growth of Indigenous Marine Protected and Conserved Areas</a></h3>
+        <span class="label">Art direction & Design & Development & Data Viz</span>
+      </div>
+      <p>A landing page created for the Tyee that highlights stories from 10 media outlets related to Indigenous Marine Protected and Conserved Areas. The page incorporates Copernicus Sentinel satellite imagery.</p>
+    </div>
+    <div class="flex portfolio-item hidden">
       <div class="info">
         <img class="wide" alt="GRC" src="assets/img/Grc_Horizontallogo_Black_Logo_Full_Color_RGB.svg" width="100" height="8" />
         <h3><a href="https://globalreportingcentre.org/">Global Reporting Centre</a></h3>
@@ -157,27 +188,19 @@
       </div>
       <p>The landing page for an eight-part series on alcohol use, addiction, and healing in Yellowknife. Each piece was directed by the storytellers themselves, and aired on PBS NewsHour. Winner of a national Edward R. Murrow Award for Excellence in Diversity, Equity and Inclusion.</p>
     </div>
-    <div class="flex portfolio-item hidden">
-      <div class="info">
-        <h3><a href="https://kitprep-75294.firebaseapp.com/">KitPrep</a></h3>
-        <span class="label">Design & Development</span>
-      </div>
-      <p>This was a demo project created with React and Firebase that allows people to create, save, and share custom emergency preparedness checklists without an account.</p>
-    </div>
     <button id="more">Show more +</button>
   </section>
   <section>
     <h2 class="label">Elegant wall of text</h2>
     <p>Here are some of the tools and skills I’ve used in <span class="web">web</span>, <span class="prod">production</span>, or <span class="des">design</span> projects:</p>
     <ul class="skills-wall">
-        <li><span class="web">html/css</span>sass, tailwind, css frameworks, semantic html, markdown/mdx, wcag</li><li><span class="web">JavaScript</span>vanilla, react, vue, firebase</li><li><span class="web">Static site generators</span>gatsby, jekyll, next, docusaurus</li><li><span class="web">Content management systems (CMS)</span>implementation, migration, management, and custom dev on wordpress, drupal, ghost, bricolage</li><li><span class="web">Tools</span>git, vs code, task runners, npm, apis (Vimeo, google maps, WordPress REST)</li><li><span class="web">Server/IT management & security</span>digital ocean, cloudflare, password managers, g workspace admin</li><li><span class="web">Data & visualization</span>chart js, d3, advanced excel/sheets, custom maps</li><li><span class="web">Web animation</span>three js, css, adobe animate</li><li><span class="web">Performance & testing</span>g & cf analytics, lighthouse, lambdatest, browserstack</li><li><span class="prod">Producing & pm</span>managing teams and projects using tools like airtable, budibase, trello, slack</li><li><span class="prod">Writing & editing</span>creative, copywriting, interactive, grants, reports</li><li><span class="prod">Donations, tickets, & CRM</span>mailchimp, zeffy, gathercontent, monday, zapier</li><li><span class="prod">SEO</span>yoast, schema, opengraph, metadata</li><li><span class="prod">Research & analysis</span>journalistic, data, academic, lit review, environmental scans</li><li><span class="prod">Partnerships</span>stakeholder and client relations</li><li><span class="des">Design</span>canva, photoshop, indesign, acrobat pro, illustrator, basic video with premiere, after effects, media encoder</li><li><span class="des">UI/UX & prototyping</span>user journeys, storyboards, a/b testing, draw.io, adobe xd/figma</li><li><span class="des">Accessibility</span>Web Content Accessibility Guidelines compliance, testing with assistive tech</li><li><span class="des">Creative leadership</span>content strategy, art direction, contractor partnerships</li>
+        <li><span class="web">html/css</span>sass, tailwind, css frameworks, semantic html, markdown/mdx, wcag</li><li><span class="web">JavaScript</span>vanilla, react, vue, firebase</li><li><span class="web">Static site generators</span>gatsby, jekyll, next, docusaurus</li><li><span class="web">Content management systems (CMS)</span>implementation, migration, management, and custom dev on wordpress, drupal, ghost, bricolage</li><li><span class="web">Tools</span>git, vs code, task runners, npm, apis (Vimeo, google maps, WordPress REST)</li><li><span class="web">Server/IT management & security</span>digital ocean, cloudflare, password managers, g workspace admin</li><li><span class="web">Data & visualization</span>chart js, d3, advanced excel/sheets, custom maps</li><li><span class="web">Web animation</span>three js, css, adobe animate</li><li><span class="web">Performance & testing</span>g & cf analytics, lighthouse, lambdatest, browserstack</li><li><span class="prod">Producing & pm</span>managing teams and projects using tools like airtable, budibase, trello, slack</li><li><span class="prod">Writing & editing</span>creative, copywriting, interactive, grants, reports</li><li><span class="prod">Donations, tickets, & CRM</span>mailchimp, zeffy, gathercontent, monday, zapier</li><li><span class="prod">SEO</span>yoast, schema, opengraph, metadata</li><li><span class="prod">Research & analysis</span>journalistic, data, academic, lit review, environmental scans</li><li><span class="prod">Partnerships</span>stakeholder and client relations</li><li><span class="des">Design</span>canva, photoshop, indesign, acrobat pro, illustrator, basic video with premiere, after effects, media encoder</li><li><span class="des">UI/UX & prototyping</span>user journeys, storyboards, a/b testing, draw.io, figma</li><li><span class="des">Accessibility</span>Web Content Accessibility Guidelines compliance, testing with assistive tech</li><li><span class="des">Creative leadership</span>content strategy, art direction, contractor partnerships</li>
     </ul>
   </section>
 </main>
-<footer><p><span>(Still) want</span><span>Want</span> to work together? Drop me a line at <a href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>.</p></footer>
-</div>
-    <script type="text/javascript" src="/assets/js/main.js"></script>
-
+<footer><p><span>(Still) want</span><span>Want</span> to work together? Reach me at <a href="mailto:mail@andrewmunroe.com">mail@andrewmunroe.com</a>.</p></footer>
+    <script type="text/javascript" defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" defer src="/assets/js/main.js"></script>
   </body>
 
 </html>
